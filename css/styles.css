@@ -1,0 +1,333 @@
+/* =-=-=-=-=-=-= Import Section =-=-=-=-=-=-= */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap");
+
+/* =-=-=-=-=-=-= Global Styles =-=-=-=-=-=-= */
+
+:root {
+  /* Fonts */
+  --main-font: "Nunito", sans-serif;
+
+  /* Color Palete */
+  --dark-text-color: #433f59;
+  --light-text-color: #827f9f;
+  --white-color: #f7f8fa;
+  --main-color: #50afc0;
+  --highlight-color: #ff7b78;
+  --contrast-color: #dcdcdc;
+  --shadow-color: rgba(67, 63, 89, 0.5);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--dark-text-color);
+  background: var(--white-color);
+  font: 2rem var(--main-font);
+  margin: 0;
+}
+
+hr {
+  border-style: none;
+  border-top: 1px solid var(--contrast-color);
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.external-link::after {
+  content: "open_in_new";
+  font-family: "Material Icons";
+  font-size: 90%;
+  margin-left: 0.5rem;
+  vertical-align: -0.4rem;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.external-link:hover::after,
+.external-link:focus::after {
+  opacity: 1;
+}
+
+/* =-=-=-=-=-=-= Wrapper Styles =-=-=-=-=-=-= */
+
+.wrapper {
+  gap: 0 6rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* =-=-=-=-=-=-= Hero Styles =-=-=-=-=-=-= */
+
+.hero-section {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img {
+  background: var(--main-color);
+  border-radius: 0 50rem 50rem 0;
+  filter: drop-shadow(0 0 4px var(--shadow-color));
+
+  padding: 3rem;
+  max-width: 30rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.hero-img img {
+  border-radius: 50%;
+  outline: 1rem solid var(--white-color);
+  max-width: 20rem;
+}
+
+.hero-section h1 {
+  margin: 3rem 1rem 0;
+}
+
+.hero-section span {
+  color: var(--highlight-color);
+}
+
+.hero-section h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.hero-section > p {
+  color: var(--light-text-color);
+  line-height: 3rem;
+  margin: 3rem 1rem;
+  max-width: 30ch;
+}
+
+.hero-links {
+  line-height: 3rem;
+  margin: 0 1rem;
+}
+
+.hero-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-links a::before {
+  content: "link";
+  font-family: "Material Icons";
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.hero-links address {
+  font-style: normal;
+}
+
+.hero-links address::before {
+  content: "place";
+  font-family: "Material Icons";
+  margin-right: 0.5rem;
+  vertical-align: text-bottom;
+}
+
+.hero-links p {
+  margin: 0;
+}
+
+.hero-links p::before {
+  content: "badge";
+  font-family: "Material Icons";
+  margin-right: 0.5rem;
+  vertical-align: text-bottom;
+}
+
+/* =-=-=-=-=-=-= Main Styles =-=-=-=-=-=-= */
+
+.main-section {
+  flex: 2;
+  border-left: 1px solid var(--contrast-color);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section h1 {
+  margin: 1rem;
+}
+
+/* =-=-=-=-=-=-= Skills Styles =-=-=-=-=-=-= */
+
+.skills-section {
+  flex: none;
+  margin: 1rem;
+  max-width: 100rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-item {
+  color: var(--light-text-color);
+  background: var(--contrast-color);
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+}
+
+/* =-=-=-=-=-=-= Repositories Section =-=-=-=-=-=-= */
+
+.repositories-section {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.repository-item {
+  color: var(--white-color);
+  background: var(--main-color);
+  border-radius: 2rem;
+  box-shadow: 0 1px 4px var(--shadow-color);
+
+  position: relative;
+  max-width: 100rem;
+  padding: 2rem;
+  margin: 1rem;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.repository-item h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.repository-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.repository-item p {
+  margin: 2rem 0;
+}
+
+.programming-language::before {
+  content: "code";
+  font-family: "Material Icons";
+  margin-right: 0.5rem;
+  vertical-align: -0.3rem;
+}
+
+/* =-=-=-=-=-=-= Footer Styles =-=-=-=-=-=-= */
+
+#footer-hr {
+  margin: 0;
+}
+
+.footer-section {
+  font-weight: bold;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-section p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.footer-section a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: var(--main-color);
+}
+
+/* =-=-=-=-=-=-= Media Queries =-=-=-=-=-=-= */
+
+@media (max-width: 767px) {
+  /* Media Queries for mobile/tablet devices */
+
+  .wrapper {
+    flex-direction: column;
+    gap: 4rem 0rem;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+  }
+
+  .main-section {
+    border: 0;
+  }
+
+  .repositories-section {
+    margin: 1rem;
+
+    overflow-x: scroll;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+
+    flex-direction: row;
+  }
+
+  .repository-item {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 920px) {
+  /* Fix the footer alignment problem in small devices. */
+  .footer-section {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-section {
+    /* Fix the mobile landscape breaking layout. */
+    height: 100vmax;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 2559px) {
+  html {
+    /* Grow font-size for larger screens. */
+    font-size: 93.75%;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    /* Grow font-size for 4k screen and above. */
+    font-size: 125%;
+  }
+}
